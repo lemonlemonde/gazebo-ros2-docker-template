@@ -1,23 +1,30 @@
 ## What is this?
 
-Gazebo (Harmonic) and ROS2 (Jazzy) on Docker, with Xvfb virtual server and x11vnc.
+Gazebo (Harmonic) and ROS2 (Jazzy) on Docker.
+Container runs XFCE lightweight desktop env and is displayed on host machine via Xvfb virtual server and x11vnc.
 
-It's actually not very comfortable without the desktop environment....so I'm not sure why one would choose this. But I think you could install a desktop env on top of this template, and it should work?
+---
 
 ## Quick Start
 
 1. `docker build -t gazebo-template .`
-2. `docker run --name gazebo -it -p 5900:5900 gazebo-template`
+2. `docker run --name gazebo -d -p 5900:5900 gazebo-template`
+- Run detached, since want to keep VNC server up and running (AKA don't give container SIGINT with ctrl+C)
 - All servers (Gazebo, Xvfb, x11vnc) will automatically run in the background.
-- `exit`
-- Restart: `docker start -ai gazebo`
+- How to pause: `docker stop gazebo`
+- How to restart: `docker start gazebo`
+    - this will clean up any old X files if server didn't properly end, then spins up all servers again, and you can reconnect!
+    - you might have to wait a few secs
 
 3. View on host machine with one of these methods:
 - RealVNC (`localhost:5900`)
-- (`localhost:5900`) Mac's Screen Sharing application, as of Ventura 13.5.2. Any of these methods:
+- OR (`localhost:5900`) Mac's Screen Sharing application, as of Ventura 13.5.2. Any of these methods:
     - Browser --> redirect to Screen Sharing
     - Finder, Go > Connect to server
     - Open app directly in `System/Library/CoreServices/Applications/Screen Sharing`
+4. Gazebo should be automatically open! Looks like this:
+- right click Desktop > Desktop Settings to set a mousey background :3
+![media](/media/startup.png)
 
 ---
 
