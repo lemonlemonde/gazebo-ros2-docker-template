@@ -9,8 +9,8 @@ It's actually not very comfortable without the desktop environment....so I'm not
 1. `docker build -t gazebo-template .`
 2. `docker run --name gazebo -it -p 5900:5900 gazebo-template`
 - All servers (Gazebo, Xvfb, x11vnc) will automatically run in the background.
-- Exit with `exit`. (This will kill the servers and)
-- Restart paused container with `docker start -ai gazebo`
+- `exit`
+- Restart: `docker start -ai gazebo`
 
 3. View on host machine with one of these methods:
 - RealVNC (`localhost:5900`)
