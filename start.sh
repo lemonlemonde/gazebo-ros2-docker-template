@@ -17,10 +17,11 @@ bash
 
 # clean exit
 # want to kill without having to look up ps aux
-echo "Killing Xvfb, x11vnc, and Gazebo..."
-kill $XVFB_PID
-kill $VNC_PID
-kill $GAZEBO_PID
-wait $XVFB_PID $VNC_PID $GAZEBO_PID
-echo "All processes stopped. Bye!"
-exit 0
+
+# echo "Killing Xvfb, x11vnc, and Gazebo..."
+# kill $XVFB_PID
+# kill $VNC_PID
+# kill $GAZEBO_PID
+# wait $XVFB_PID $VNC_PID $GAZEBO_PID
+# echo "All processes stopped. Bye!"
+# exit 0
