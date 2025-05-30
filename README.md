@@ -21,7 +21,7 @@ Inspired(?) by:
 
 3. View on host machine with one of these methods:
 - RealVNC (`localhost:5900`)
-- OR (`localhost:5900`) Mac's Screen Sharing application, as of Ventura 13.5.2 on 2019 Macbook Pro. Any of these methods:
+- OR (`vnc://localhost:5900`) Mac's Screen Sharing application, as of Ventura 13.5.2 on 2019 Macbook Pro. Any of these methods:
     - Browser --> redirect to Screen Sharing
     - Finder, Go > Connect to server
     - Open app directly in `System/Library/CoreServices/Applications/Screen Sharing`
