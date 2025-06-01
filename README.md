@@ -48,3 +48,6 @@ Inspired(?) by:
 - `xdg-utils` for VS Code installation, for some reason
 - `dbus-x11 x11-xserver-utils libgl1-mesa-glx libgl1-mesa-dri` are extra utils for the X server and for rendering Gazebo's Qt GUI.
     - (`libgl1-mesa-glx` is replaced with `libgl1` for newer Ubuntu versions (24.04)) 
+- GPG Keyring issues?!?!??!! I can't `apt install` any packages???
+    - Look here: https://discourse.ros.org/t/ros-signing-key-migration-guide/43937/7
+    - key expires June 1..........which I found out on June 1...
