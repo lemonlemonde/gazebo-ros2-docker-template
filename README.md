@@ -6,7 +6,8 @@ Container runs XFCE lightweight desktop env and can interact from host machine v
 
 Preinstalled:
 - everything in `humble-desktop-full`, so `ros2`
-    - `Gazebo` is part of this, but seemingly not configured with CLI (e.g., can't do `gz sim`, whereas `ros2 launch ros_gz_sim_demos imu.launch.py` works)
+    - `Gazebo` is part of this, but it's the "Ignition" version! The command to open is `ign gazebo` (without ROS) or `ros2  launch ros_gz_sim gz_sim_launch.py` (with ROS).
+    - I believe `gazebo` or `gzclient` commands are for older versions (Gazebo Classic), while `gz sim` is for newer versions (Gazebo Harmonic +?).
 - code (start with `code &`, or in Applications > Development)
 
 
